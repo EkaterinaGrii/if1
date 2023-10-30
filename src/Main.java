@@ -50,19 +50,32 @@ public class Main {
         }
 
         //Задача6 Насколько забит вагон
-        int passenger=120;
+        int passenger=10;
         int capacityCoach=102;
         int seatingArea= 60;
-        boolean a = capacityCoach>passenger;
-        boolean b= seatingArea>=passenger && passenger<=capacityCoach;
-        if (a) {
-            System.out.println("Есть место");
+        boolean capacity = capacityCoach>=passenger;
+        if (capacity) {
+            System.out.printf("Есть место. ");
+            if (passenger<=seatingArea) {
+                System.out.println("Место сидячее");
+            } else {
+                System.out.println("Есть стоячее место");
+            }
         } else {
             System.out.println("Вагон переполнен");
-        } if (b) {
-            System.out.println("Место сидячее");
-        } else {
-            System.out.println("Есть стоячее место");
         }
-    }
+
+        //Задача7 Какое из трех чисел больше?
+        int one=5;
+        int two=4;
+        int three=3;
+        if (one-two>0 && one-three>0) {
+            System.out.println("Большеe "+one);
+        } else {
+            if (two-one>0 && two-three>0) {
+                System.out.println("Большеe "+two);
+            } else {
+                System.out.println("Большеe "+three);
+            }
+    }}
 }
